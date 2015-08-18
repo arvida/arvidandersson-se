@@ -2,6 +2,7 @@ body {
   background: #efefef;
   color: #333;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.4em;
 }
 
 a {
@@ -13,11 +14,11 @@ a:hover {
 }
 
 img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
   box-shadow: 0 0 1px #333;
 }
 
@@ -26,19 +27,25 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  font-size: 20px;
+}
+
 ul
 {
   margin: 0;
   padding: 0;
 }
 
-ul li
-{
+ul li {
   list-style-type: none;
+}
+
+.links li {
   display: inline;
 }
 
-li:before {
+.links li:before {
   content: " ⋄ ";
   color: #999;
 }
@@ -48,11 +55,50 @@ li:first-child:before {
 }
 
 .content {
-  max-width: 400px;
+  max-width: 520px;
   margin: 40px auto 40px auto;
   text-align: center;
 }
 
 .links {
   margin-top: 2em;
+}
+
+.image {
+  position: relative;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
+
+.text-content {
+  font-size: 14px;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  opacity: 0;
+}
+
+.image:hover .text-content {
+  opacity: 1;
+}
+
+
+.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-content a {
+  color: #eee;
 }
